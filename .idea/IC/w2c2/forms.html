@@ -3,44 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Chanel's Awesome Website</title>
+  <link rel="stylesheet" type="text/css" href="layout.css">
 </head>
-<body>
-<table border="1" style="width:100%">
-  <tr>
-    <td colspan="2">
-      <header>
+<body class="body">
+      <header class="header">
         <h1>Chanel's Awesome Website</h1>
       </header>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <nav>
-        <a href="IC02.html">Home</a>
-        <a href="Forms.html">Forms</a>
+      <nav class="nav">
+        <a href="index.html">Home</a> |
+        <a href="forms.html">Forms</a>
       </nav>
-    </td>
-  </tr>
-  <tr>
-    <td style="width:25%; vertical-align: top; text-align: center">
-      <aside>
-        <header>
+      <aside class="sidePanel">
+        <header class="summaryHeader">
           <p><b>Forms Summary</b></p>
         </header>
 
-        <article>
+        <article class="summaryText">
           <p>HTML supports several different types of input.</p>
         </article>
       </aside>
-    </td>
-    <td style="width:75%">
-      <section>
-        <header>
+      <section class="mainPanel">
+        <header class="mainHeader">
           <h3>Forms Page</h3>
         </header>
-        <article>
+        <article class="mainText">
           <p>
-          <form action="Forms.html" method="get">
+          <form action="forms.html" method="get">
             <p>The following is a text input:</p>
             Email:
             <input type="email" name="email">
@@ -65,15 +53,8 @@
           </form>
         </article>
       </section>
-    </td>
-  </tr>
-  <tr style="text-align: center">
-    <td colspan="2">
-      <footer>
+      <footer class="footer">
         Copyright (C) Cam Moore
       </footer>
-    </td>
-  </tr>
-</table>
 </body>
 </html>

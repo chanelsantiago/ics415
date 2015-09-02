@@ -1,0 +1,36 @@
+.body {
+  border: double black;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  border-bottom: double black;
+}
+
+.nav{
+  width: 100%;
+  border-bottom: double black;
+}
+
+.sidePanel {
+  width: 25%;
+  height: 95%;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: top;
+}
+
+.mainPanel {
+  width: 74%;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  border-left: double black;
+}
+
+.footer {
+  width: 100;
+  text-align: center;
+  border-top: double black;
+}
