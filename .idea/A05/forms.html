@@ -18,6 +18,10 @@
 
   <aside class="sidePanel">
     <p>Here you can sign up for our Disneyland updates!</p>
+    <form action="forms.html" method="get">
+      <input type="search" name="search">
+      <input type="submit" name="submit" value="Search">
+    </form>
   </aside>
 
   <section class="mainPanel">
@@ -34,11 +38,23 @@
       Birthdate:
       <input type="date" name="bday" required>
       <br><br>
+      Age:
+      <input type="number" name="age" required>
+      <br><br>
       How are you feeling today?    Sad
       <input type="range" name="feeling" min="0" max="10" step="1" required> Happy
       <br><br>
       Favorite Color:
-      <input type="color" name="fave">
+      <input type="color" name="color" required>
+      <br><br>
+      Current Month & Year:
+      <input type="month" name="month" required>
+      <br><br>
+      Current Date & Time
+      <input type="datetime-local" required/>
+      <br><br>
+      *Optional: Facebook Link so we can add you!
+      <input type="url" name="fb">
       <br><br>
       <input type="checkbox" name="agree" value="agreed" required> I agree to the Terms & Conditions
       <br><br>
