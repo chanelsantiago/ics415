@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head height="100%">
+  <meta charset="UTF-8">
+  <title>A06 Chanel Santiago</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body style="height: 100%;">
+<div class="container" style="height: 100%;">
+  <div class="row" style="height: 25%;">
+    <div class="container-fluid">
+      <h1 style="text-align: center">Welcome to Chanel's Website</h1>
+    </div>
+  </div>
+  <nav class="navbar navbar-default" style="height: 50px">
+    <div class="container-fluid">
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Second</a> </li>
+          <li><a href="#">Third</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-sm-3">
+      <h4 style="text-align: center; color: darkblue">Summary</h4>
+      <br>
+      <p style="color: darkblue">The following tabs show a variety of features that are available through bootstrap.</p>
+      <p style="color: darkblue"><b>Buttons</b></p>
+      <p style="color: darkblue">Buttons tab displays a variety of button options available.</p>
+      <p style="color: darkblue"><b>Inputs</b></p>
+      <p style="color: darkblue">Inputs tab displays vertical & horizontal input forms.</p>
+      <p style="color: darkblue"><b>Responsive Video</b></p>
+      <p style="color: darkblue">Responsive Video tab displays a YouTube video that responds to the size of your screen.</p>
+    </div>
+    <div class="col-sm-9" style="border-left: solid darkblue 1px">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Buttons</a></li>
+        <li><a data-toggle="tab" href="#menu1">Input</a></li>
+        <li><a data-toggle="tab" href="#menu2">Responsive Video</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <h3>Buttons</h3>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">One</button>
+            <button type="button" class="btn btn-primary">Two</button>
+            <button type="button" class="btn btn-primary">Three</button>
+          </div>
+
+          <div class="btn-group-vertical">
+            <button type="button" class="btn btn-primary">Four</button>
+            <button type="button" class="btn btn-primary">Five</button>
+            <button type="button" class="btn btn-primary">Six</button>
+          </div>
+          <br><br>
+          <button type="button" class="btn btn-default">Hello</button>
+          <br>
+          <button type="button" class="btn btn-primary">Click me</button>
+          <br>
+          <button type="button" class="btn btn-success">Yay</button>
+          <br>
+          <button type="button" class="btn btn-info">Try me</button>
+          <br>
+          <button type="button" class="btn btn-warning">NO NO NO</button>
+          <br>
+          <button type="button" class="btn btn-danger">GO BACK</button>
+          <br>
+          <button type="button" class="btn btn-link">Click again</button>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <h3>Input</h3>
+          <form role="form">
+            <div class="form-group">
+              <label for="email">Email: </label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="psd">Password: </label>
+              <input type="password" class="form-control" id="email">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <br><br>
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="email">Email:</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">Password:</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-default">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h3>Three</h3>
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" width="630" height="477.5"
+                    src="http://www.youtube.com/embed/oxbx-xRTCTI">
+            </iframe>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" style="height: 50px; border-top: solid darkblue 1px; border-bottom: solid darkblue 1px;">
+      <p style="text-align: center; line-height: 50px">Website by Chanel Santiago</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
