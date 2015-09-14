@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IC06-Chanel Santiago</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+<body onclick="bodyclick()">
+  <div class="container">
+    <div class="row">
+      <div class="container-fluid">
+        <h1 style="text-align: center">Welcome to Chanel's Website</h1>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" style="height: 50px">
+      <div class="container-fluid">
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Second</a> </li>
+            <li><a href="#">Third</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-sm-3" onmouseover="mouseenter()" onmouseout="mouseleave()">
+        <p><b>Summary</b></p>
+        <p class="demo">This website is for In-Class Actvity 06.</p>
+        <br>
+        <p class="demo">This website is an example Bootstrap webpage with event handlers in various divs.</p>
+      </div>
+      <div class="col-sm-9" style="border-left: solid darkblue 1px" onmouseover="mouseenter()" onmouseout="mouseleave()">
+        <p class="demo">Click on the background to change background color.</p>
+        <br>
+        <p class="demo">Rollover some text to see it change color.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" style="height: 50px; border-top: solid darkblue 1px; border-bottom: solid darkblue 1px;">
+        <p style="text-align: center; line-height: 50px">Website by Chanel Santiago</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function mouseenter() {
+      document.getElementsByClassName("demo").style.color="red";
+    }
+    function mouseleave() {
+      document.getElementsByClassName("demo").style.color="black";
+    }
+    function bodyclick() {
+      document.getElementsByTagName("BODY")[0].style.backgroundColor="yellow";
+    }
+  </script>
+</body>
+</html>
