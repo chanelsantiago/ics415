@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IC07: Chanel Santiago</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="container-fluid">
+        <h1>Chanel's Website</h1>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" style="height: 50px">
+      <div class="container-fluid">
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="form.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-sm-3">
+        <p><b>Summary</b></p>
+        <p>All information entered will appear on this page.</p>
+      </div>
+      <div class="col-sm-9" style="border-left: solid black 1px">
+        <table id="myTable" onload="addTable()">
+
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    function addTable() {
+      var nameIndex = location.href.indexOf("=")+1;
+      var url1 = location.href.substring(nameIndex);
+      var nameIndex2 = url1.indexOf("&");
+      var name = url1.substring(0,nameIndex2);
+
+      var addIndex = url1.indexOf("=")
+      var url2 = url1.substring(addIndex);
+      var addIndex2 = url2.indexOf("&");
+      var add = url2.substring(0,addIndex2);
+
+      var phoneIndex = url2.indexOf("=")
+      var url3 = url2.substring(addIndex);
+      var phoneIndex2 = url3.indexOf("&");
+      var phone = url3.substring(0,phoneIndex2);
+
+      var body = document.createElement("BODY");
+      var table = document.createElement("TABLE");
+      var header = table.createTHead();
+      var row = header.insertRow(0);
+      var cell1 = row.insertCell(0);
+      cell1.innerHTML = name;
+      var cell2 = row.insertCell(1);
+      cell2.innerHTML = add;
+      var cell3 = row.insertCell(2);
+      cell3.innerHTML = phone;
+
+      row.appendChild("cell1");
+      row.appendChild("cell2");
+      row.appendChild("cell3");
+      header.appendChild("row");
+      table.appendChild("header");
+      body.appendChild("table");
+    }
+  </script>
+</body>
+</html>
