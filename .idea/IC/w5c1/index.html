@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IC08: Chanel Santiago</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" style="height: 100%;">
+  <div class="row" style="height: 25%;">
+    <div class="container-fluid" id="header">
+      <h1 style="text-align: center">Welcome to Chanel's Website</h1>
+    </div>
+  </div>
+  <nav class="navbar navbar-default" style="height: 50px">
+    <div class="container-fluid">
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Second</a> </li>
+          <li><a href="#">Third</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-sm-3" id="side">
+      <p><b>In-Class Activity 08</b></p>
+      <p>The webpage demonstrates event handlers for jQuery.</p>
+    </div>
+    <div class="col-sm-9" id="main" style="border-left: solid black 1px;" style="height: 100 px">
+      <h3>Welcome to this page.</h3>
+
+      <p>1) Click on this section and see what happens.</p>
+      <p>2) Hover mouse over the side panel and see what happens.</p>
+      <p>3) Hover mouse over and leave the header to see what happens.</p>
+      <p>4) Press on a key to see what happens.</p>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12" style="height: 50px; border-top: solid darkblue 1px; border-bottom: solid darkblue 1px;">
+      <p style="text-align: center; line-height: 50px">Website by Chanel Santiago</p>
+    </div>
+  </div>
+</div>
+<script>
+  console.log();
+  $("#main").click(function clickme() {
+    this.style.backgroundColor = "yellow";
+    this.style.textAlign = "right";
+  });
+
+  $("#side").mouseenter(function enter() {
+    this.style.backgroundColor = "lime";
+    this.style.color = "purple";
+    this.style.textAlign = "center";
+  });
+
+  $("#header").mouseleave(function leave() {
+    this.style.border = "solid darkblue 10px";
+    this.style.color = "blue";
+    this.style.backgroundColor = "pink";
+  });
+
+  $("body").keydown(function down() {
+    this.style.backgroundColor = "red";
+  });
+
+  $("body").keyup(function up() {
+    this.style.backgroundColor = "white";
+  });
+</script>
+
+</body>
+</html>
