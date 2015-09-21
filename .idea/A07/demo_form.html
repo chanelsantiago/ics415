@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A07: Chanel Santiago</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container" style="height: 100%;">
+    <div class="row" style="height: 25%;">
+      <div class="container-fluid">
+        <h1 style="text-align: center">Welcome to Chanel's Website</h1>
+      </div>
+    </div>
+    <nav class="navbar navbar-default" style="height: 50px">
+      <div class="container-fluid">
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Second</a> </li>
+            <li><a href="#">Third</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-sm-3">
+        <p><b>Assignment A07</b></p>
+        <p>The webpage displays appropriate error messages.</p>
+      </div>
+      <div class="col-sm-9" style="border-left: solid black 1px;">
+        <form name="myForm" action="demo_form.html" onsubmit="return validateForm()" method="get">
+          <p class="message" id="message" style="color: red;"></p>
+          <div class="form-group">
+            <label for="username">User name: </label>
+            <input type="text" name="name" id="username">
+          </div>
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password">
+          </div>
+          <div class="form-group">
+            <label for="confirm">Confirm Password: </label>
+            <input type="password" name="confirm" id="confirm">
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" style="height: 50px; border-top: solid darkblue 1px; border-bottom: solid darkblue 1px;">
+        <p style="text-align: center; line-height: 50px">Website by Chanel Santiago</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function validateForm() {
+      var message = document.getElementById("message");
+      message.innerHTML = "";
+      var name = document.forms["myForm"]["name"].value;
+      if (name == "" || name == " ") {
+        document.getElementById("password").style.backgroundColor = "white";
+        document.getElementById("email").style.backgroundColor = "white";
+        document.getElementById("confirm").style.backgroundColor = "white";
+        document.getElementById("username").style.backgroundColor = "red";
+        message.innerHTML = "ERROR: Name is required.";
+        return false;
+      }
+      var email = document.forms["myForm"]["email"].value;
+      if (email == "" || name == " ") {
+        document.getElementById("password").style.backgroundColor = "white";
+        document.getElementById("confirm").style.backgroundColor = "white";
+        document.getElementById("username").style.backgroundColor = "white";
+        document.getElementById("email").style.backgroundColor = "red";
+        message.innerHTML = "ERROR: Email is required.";
+        return false;
+      }
+      var password = document.forms["myForm"]["password"].value;
+      if (password == "" || password == " ") {
+        document.getElementById("confirm").style.backgroundColor = "white";
+        document.getElementById("email").style.backgroundColor = "white";
+        document.getElementById("username").style.backgroundColor = "white";
+        document.getElementById("password").style.backgroundColor = "red";
+        message.innerHTML =  "ERROR: Password is required.";
+        return false;
+      }
+      var confirm = document.forms["myForm"]["confirm"].value;
+      if (confirm == "" || confirm == " ") {
+        document.getElementById("password").style.backgroundColor = "white";
+        document.getElementById("email").style.backgroundColor = "white";
+        document.getElementById("username").style.backgroundColor = "white";
+        document.getElementById("confirm").style.backgroundColor = "red";
+        message.innerHTML = "ERROR: Confirm Password is required";
+        return false;
+      }
+      if (password != confirm) {
+        document.getElementById("email").style.backgroundColor = "white";
+        document.getElementById("username").style.backgroundColor = "white";
+        document.getElementById("password").style.backgroundColor = "red";
+        document.getElementById("confirm").style.backgroundColor = "red";
+        message.innerHTML = "ERROR: Password & Confirm Password must be the same.";
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
