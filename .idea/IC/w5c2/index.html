@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IC09: Chanel Santiago</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" style="height: 100%;">
+  <div class="row" style="height: 25%;">
+    <div class="container-fluid" id="header">
+      <h1 style="text-align: center">Welcome to Chanel's Website</h1>
+    </div>
+  </div>
+  <nav class="navbar navbar-default" style="height: 50px">
+    <div class="container-fluid">
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Second</a> </li>
+          <li><a href="#">Third</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-sm-6" id="side">
+      <p><b>In-Class Activity 09</b></p>
+      <p>The webpage demonstrates AJAX calls</p>
+    </div>
+    <div class="col-sm-6" id="main" style="border-left: solid black 1px;" style="height: 100 px">
+      <h3>Welcome to this page.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4" style="background-color: aquamarine; height: 200px;">
+      <h3 id="div1"></h3>
+      <button type="button" onclick="myname()">My name is...</button>
+    </div>
+    <div class="col-sm-4" style="background-color: aqua; height: 200px;">
+      <p id="div2"></p>
+      <button type="button" onclick="us()">More info here</button>
+    </div>
+    <div class="col-sm-4" style="background-color: mediumaquamarine; height: 200px;">
+      <p id="div3"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3" style="background-color: cyan; height: 200px;">
+      <p id="div4"></p>
+    </div>
+    <div class="col-sm-4" style="background-color: lightcyan; height: 200px;">
+      <p id="div5"></p>
+    </div>
+    <div class="col-sm-5" style="background-color: darkcyan; height: 200px;">
+      <p id="div6"></p>
+    </div>
+  </div>
+  <div class="row">
+  <div class="row">
+    <div class="col-sm-12" style="height: 50px; border-top: solid darkblue 1px; border-bottom: solid darkblue 1px;">
+      <p style="text-align: center; line-height: 50px">Website by Chanel Santiago</p>
+    </div>
+  </div>
+</div>
+<script>
+  var xmlhttp = new XMLHttpRequest();
+  var txt, person, name, birthdate, age;
+
+  function loadXMLDoc(url,func) {
+    xmlhttp.onreadystatechange = func;
+    xmlhttp.open("get", url, true);
+    xmlhttp.send();
+  }
+
+  function myname() {
+    loadXMLDoc("ajax.txt", function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        document.getElementById("div1").innerHTML = xmlhttp.responseText;
+      }
+    });
+  }
+
+  function us() {
+    loadXMLDoc("info.xml", function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        txt="<table border = '1'><tr><th>Name</th><th>Birthdate</th><th>Age</th></tr>";
+        person = xmlhttp.responseXML.documentElement.getElementsByTagName("person");
+        for (i = 0; i < person.length; i++) {
+          txt = txt + "<tr>";
+          name = person[i].getElementsByTagName("name");
+          {
+            try {
+              txt = txt + "<td>" + name[0].firstChild.nodeValue + "</td>";
+            }
+            catch (er) {
+              txt = txt + "<td>&nbsp;</td>";
+            }
+          }
+          birthdate = person[i].getElementsByTagName("birthdate");
+          {
+            try {
+              txt = txt + "<td>" + birthdate[0].firstChild.nodeValue + "</td>";
+            }
+            catch (er) {
+              txt = txt + "<td>&nbsp;</td>";
+            }
+          }
+          age = person[i].getElementsByTagName("age");
+          {
+            try {
+              txt = txt + "<td>" + age[0].firstChild.nodeValue + "</td>";
+            }
+            catch (er) {
+              txt = txt + "<td>&nbsp;</td>";
+            }
+          }
+          txt = txt + "</tr>";
+        }
+        txt = txt + "</table>";
+        document.getElementById("div2").innerHTML = txt;
+      }
+    });
+  }
+
+</script>
+
+</body>
+</html>
